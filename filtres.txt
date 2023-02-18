@@ -1,0 +1,50 @@
+Dans le ZIP filter design il y a plusieurs types de codes matlab:
+
+-Les LP ==> Low Pass Filter
+-Les BP ==> Band Pass Filter
+-Les BR ==> Band Reject Filter
+-Les HP ==> High Pass Filter
+
+-Les AP jsp ce que c'est
+-Les GP je pense que c'est Gain uniquement mais pas sûr
+
+-Le START on dirait qu'il contient des explications (non runable)
+-Le mainmenu qui lance l'application mais ça me met des erreurs en boucles:
+      -Nom de fichier vide, etc...
+
+Les fichiers filtres sont aussi distingués par d'autres lettres, notamment LQ,MQ et HQ pour Low Q (facteur de qualité), Middle Q et High Q. (je pense)
+
+Dans les annexes du cours on a les filtres suivants (==>correspondance matlab si possible):
+
+-Sallen-Key
+ -LPLQ (Sallen-Key,Q<2)                        ==>LPLQ  V
+ -HPLQ (Sallen-Key,Q<2)                        ==>HPLQ  V
+ -LPMQ (Sallen-Key,Q<5)                        ==>LPMQ  V
+ -HPMQ (Sallen-Key,Q<5)                        ==>HPMQ  V
+ -BRMQ (Sallen-Key double T,Q<5)               ==>BR LPN HPN MQ (!=BRLQ et BRMQ)  V
+
+-Rauch
+ -BPLQ (type R, Q<2)                           ==>BPLQR  V
+ -BPLQ (type C, Q<2)                           ==>BPLQC  V
+ -BPMQ (type R, Q<10)   (ou HQ?)               ==>BPMQR  V
+ -BPMQ (type C, Q<10)   (ou HQ?)               ==>BPMQC  V
+
+-Cellule universelle de Deliyanis et Friend
+ -Q<30
+
+-Cellules de Flieghe ou d'Antoniou (Basées sur le convertisseur dimpédance généralisé (GIC))
+ -LP de Flieghe (Q<30)                         ==>LPHQ  V
+ -BP de Flieghe (Q<30)                         ==>BPHQ  V
+ -HP de Flieghe (Q<30)                         ==>HPHQ  V
+ -BR de Flieghe (Q<30)                         ==>LPN HPN HQ  (!= BRHQ)  V
+
+-Cellule universelle de Thow-Thomas
+ -Q<100
+
+
+LPN HPN MQ (Ressemble à LPN HPN HQ mais pas identique)
+GP1 et GP2 (Ressemblent à Thow-Thomas de l'annexe mais pas identique)
+APHQ, APLQ et APMQ (Ressemblent à leur équivalent de Flieghe mais pas identiques)
+APQ5N et APQ5P (Ressemblent à Del et Friend mais pas identiques)
+
+ASTUCE : Les fichiers JPG à la fin du zip montrent les composants du filtre
