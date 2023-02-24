@@ -40,26 +40,6 @@ else :
     st.pyplot(fig,ax)
 
     
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Feb 23 15:05:48 2023
-
-@author: Loren
-"""
-
-import streamlit as st # This must always be the first line of a streamlit app
-from numpy import *
-from matplotlib.pyplot import * # Needed for plotting
-import matplotlib.pyplot as plt
-import soundfile # Needed for playing sounds
-import io # Needed for playing sounds
-import plotly
-def st_audio(A, samplerate=44100):
-    byte_io = io.BytesIO()
-    soundfile.write(byte_io, A, samplerate, subtype='FLOAT', format='WAV')
-    st.audio(byte_io)
-
-    
 
 
     
